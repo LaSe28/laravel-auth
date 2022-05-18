@@ -15,7 +15,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::paginate(7);
+        return view('admin.posts.index', compact('posts'));
     }
 
     /**
@@ -47,7 +48,8 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view('admin.posts.show', ['title' => $post->title,
+                                        'post'     => $post]);
     }
 
     /**

@@ -78,7 +78,11 @@
         </nav>
 
         <main class="py-4">
+            <div class="container">
+                <a href="{{route('admin.posts.index')}}">Vai ai post</a>
+            </div>
             @yield('content')
+
         </main>
     </div>
 </body>
